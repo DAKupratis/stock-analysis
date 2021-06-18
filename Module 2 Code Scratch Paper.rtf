@@ -1,0 +1,93 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'91Basically - I wasn\'92t saving the code that wasn\'92t exactly working / things that I was getting stuck on, and realized that it would be more optimal to save those items in here before editing my work to match the code checks in the asynchronous material. There were some questions I had that I was forgetting, things that confused me a touch, etc. that I wanted to revisit with the help of the tutor. I\'92m going to begin now and save my \'93scratch paper\'94 code here alongside the code that I save and push to GitHub. \
+\
+2.3: Analyze multiple stocks\
+\
+2.3.1: Create a new worksheet and subroutine\
+\
+Sub AllStocksAnalysis()\
+\
+    Worksheets("All Stocks Analysis").Activate\
+\
+    Cells(1, 1).Value = "All Stocks (2018)"\
+\
+    'Create a header row\
+    Cells(3, 1).Value = "Ticker"\
+    Cells(3, 2).Value = "Total Daily Volume"\
+    Cells(3, 3).Value = "Return"\
+    \
+End Sub\
+\
+2.3.2.: Loop over all the tickers.\
+\
+\'91I don\'92t get it - we\'92re jumping straight into the arrays without creating a new sub? As for the skill drill, doesn\'92t this completely override what we just did in 2.3.1? I am going to be doing it on a new sheet and saving steps 1 - 4 below.\
+\
+\'91SKILL DRILL\
+\
+\'91STEP 1\
+\
+Sub SkillDrill232A()\
+\
+Worksheets("SkillDrill").Activate\
+\
+For i = 1 To 10\
+For j = 1 To 10\
+\
+    Cells(i, j).Value = 1\
+    \
+        Cells(j, i).Value = 1\
+        \
+        Next j\
+\
+    Next i\
+\
+End Sub\
+\
+\'91STEP 2 - I think I did step two right off the bat? I don\'92t really understand how to make Step 1 work without just using the iterators (variables).\
+\
+\'91STEP 3 - \
+\
+Sub SkillDrill232B()\
+\
+Worksheets("SkillDrill").Activate\
+\
+For i = 1 To 10\
+For j = 1 To 10\
+\
+    Cells(i, j).Value = i + j\
+    \
+        Cells(j, i).Value = j\
+        \
+        Next j\
+\
+    Next i\
+\
+End Sub\
+\
+STEP 4 - \
+\
+Sub SkillDrill232C()\
+\
+Worksheets("SkillDrill").Activate\
+\
+For i = 1 To 10\
+For j = 1 To 10\
+\
+    If Cells(i, j).Value = i + j Then Cells(i, j).Value = ""\
+    \
+        If Cells(j, i).Value = j + i Then Cells(j, i).Value = ""\
+        \
+        Next j\
+    \
+    Next i\
+\
+End Sub\
+\
+\
+}
